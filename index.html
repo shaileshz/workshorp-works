@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Congratulations</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(35, 32, 32);
+      }
+      #h1{
+        color: white;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1"></h1>
+    <img src="./6C7911377-tdy-130617-leo-toasts-1.webp" alt="Congratulations" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script>
+      const js = new JSConfetti();
+      const h1 = document.getElementById("h1");
+      window.addEventListener("load", () => {
+        setInterval(() => {
+          js.addConfetti();
+        }, 2000);
+        let write = new Typewriter(h1,{
+          strings: ["Welcome to Git and Github"],
+          autoStart :true
+        })
+      });
+
+    </script>
+  </body>
+</html>
